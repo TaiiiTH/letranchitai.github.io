@@ -6,25 +6,56 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #e9ecef; /* Màu nền nhẹ nhàng */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: 'Roboto', sans-serif; /* Sử dụng phông chữ Roboto */
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient nền đẹp */
 }
 
 .container {
-    background-color: #ffffff; /* Màu nền trắng cho khung */
+    display: flex; /* Sử dụng Flexbox */
+    flex-direction: column; /* Căn chỉnh theo chiều dọc */
+    align-items: center; /* Căn giữa các phần tử */
+    background-color: rgba(94, 236, 189, 0.9); /* Màu nền trắng với độ trong suốt */
     border-radius: 15px; /* Bo tròn góc */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Bóng đổ */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Bóng đổ mạnh hơn */
     padding: 40px; /* Padding cho khung */
     text-align: center; /* Căn giữa văn bản */
-    transition: transform 0.3s; /* Hiệu ứng chuyển động */
+    margin: 20px; /* Khoảng cách giữa các phần */
 }
 
-.container:hover {
-    transform: translateY(-5px); /* Hiệu ứng khi di chuột */
+.section {
+    padding: 20px; /* Padding cho từng phần */
+    margin: 10px; /* Khoảng cách giữa các phần */
+    border-radius: 10px; /* Bo tròn góc cho từng phần */
+    color: #fff; /* Màu chữ cho các phần */
+}
+
+.intro {
+    background-color: #ff6f61; /* Màu nền cho phần giới thiệu */
+}
+
+.skills {
+    background-color: #6a11cb; /* Màu nền cho phần kỹ năng */
+}
+
+.projects {
+    background-color: #2575fc; /* Màu nền cho phần dự án */
+}
+
+.achievements {
+    background-color: #28a745; /* Màu nền cho phần thành tựu */
+}
+
+.hobbies {
+    background-color: #ffc107; /* Màu nền cho phần sở thích */
+}
+
+.profile-image {
+    width: 100%; /* Đặt chiều rộng hình ảnh là 100% */
+    max-width: 200px; /* Kích thước tối đa cho hình ảnh */
+    height: auto; /* Chiều cao tự động để duy trì tỷ lệ */
+    border-radius: 50%; /* Bo tròn hình ảnh */
+    margin-bottom: 20px; /* Khoảng cách dưới hình ảnh */
+    border: 2px solid #007bff; /* Thêm viền cho hình ảnh */
 }
 
 h1 {
@@ -33,36 +64,48 @@ h1 {
     margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
 }
 
-p {
-    color: #6c757d; /* Màu chữ cho đoạn văn */
-    font-size: 1.2em; /* Kích thước chữ */
-    margin-top: 10px; /* Khoảng cách trên đoạn văn */
+h2 {
+    color: #fff; /* Màu chữ cho tiêu đề phụ */
+    font-size: 2em; /* Kích thước chữ cho tiêu đề phụ */
+    margin-top: 20px; /* Khoảng cách trên tiêu đề phụ */
 }
 
-/* Thêm kiểu cho số điện thoại và email */
+p {
+    line-height: 1.6; /* Khoảng cách giữa các dòng */
+    margin: 10px 0; /* Khoảng cách trên và dưới văn bản */
+}
+
 a {
-    color: #007bff; /* Màu chữ cho liên kết */
+    color: #fff; /* Màu chữ cho liên kết */
     text-decoration: none; /* Bỏ gạch chân */
-    font-weight: bold; /* Chữ đậm */
 }
 
 a:hover {
     text-decoration: underline; /* Gạch chân khi di chuột */
 }
 
-/* Thêm một số kiểu cho nút */
-button {
-    background-color: #007bff; /* Màu nền cho nút */
-    color: white; /* Màu chữ cho nút */
-    border: none; /* Không có viền */
-    border-radius: 5px; /* Bo tròn góc cho nút */
-    padding: 10px 20px; /* Padding cho nút */
-    font-size: 1em; /* Kích thước chữ cho nút */
-    cursor: pointer; /* Con trỏ khi di chuột */
-    transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
-    margin-top: 20px; /* Khoảng cách trên nút */
+ul {
+    list-style-type: none; /* Bỏ dấu đầu dòng */
+    padding: 0; /* Bỏ padding */
 }
 
-button:hover {
-    background-color: #0056b3; /* Màu nền khi di chuột */
+li {
+    background-color: rgba(255, 255, 255, 0.2); /* Màu nền cho từng mục */
+    margin: 5px 0; /* Khoảng cách giữa các mục */
+    padding: 10px; /* Padding cho từng mục */
+    border-radius: 5px; /* Bo tròn góc cho từng mục */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Giảm padding cho màn hình nhỏ */
+    }
+
+    h1 {
+        font-size: 2em; /* Giảm kích thước chữ cho tiêu đề */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Giảm kích thước chữ cho tiêu đề phụ */
+    }
 }

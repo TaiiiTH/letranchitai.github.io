@@ -5,16 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website của Lê Trần Chí Tài</title>
     <link rel="stylesheet" href="style.css"> <!-- Liên kết đến file CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>
-            Lê Trần Chí Tài
-        </h1>
+        <img src="avtth.jpg" alt="Hình ảnh của Lê Trần Chí Tài" class="profile-image">
+        <h1 id="name"></h1> <!-- Thay đổi ở đây -->
         <p>MSSV: 2180604710</p>
-        <p>Số điện thoại: <a href="tel:0776125960">0776125960</a></p> <!-- Số điện thoại -->
-        <p>Email: <a href="mailto:letranchitai251203@gmail.com">letranchitai251203@gmail.com</a></p> <!-- Email -->
-        
+        <p>Số điện thoại: <a href="tel:0776125960">0776125960</a></p>
+        <p>Email: <a href="mailto:letranchitai251203@gmail.com">letranchitai251203@gmail.com</a></p>
     </div>
+
+    <div class="section intro">
+        <h2>Giới thiệu</h2>
+        <p>
+            Xin chào! Tôi là <strong>Lê Trần Chí Tài</strong>. Tôi là một sinh viên đang theo học tại trường ...
+            Tôi đam mê về ...
+            Trong thời gian rảnh, tôi thích ...
+        </p>
+    </div>
+
+    <div class="section skills">
+        <h2>Kỹ năng</h2>
+        <ul>
+            <li>Kỹ năng 1: ...</li>
+            <li>Kỹ năng 2: ...</li>
+            <li>Kỹ năng 3: ...</li>
+        </ul>
+    </div>
+
+    <div class="section projects">
+        <h2>Dự án</h2>
+        <p>
+            Tôi đã tham gia vào một số dự án như:
+        </p>
+        <ul>
+            <li>Dự án 1: ...</li>
+            <li>Dự án 2: ...</li>
+            <li>Dự án 3: ...</li>
+        </ul>
+    </div>
+
+    <div class="section achievements">
+        <h2>Thành tựu</h2>
+        <p>
+            Một số thành tựu nổi bật của tôi bao gồm:
+        </p>
+        <ul>
+            <li>Thành tựu 1: ...</li>
+            <li>Thành tựu 2: ...</li>
+            <li>Thành tựu 3: ...</li>
+        </ul>
+    </div>
+
+    <div class="section hobbies">
+        <h2>Sở thích</h2>
+        <p>
+            Tôi có một số sở thích như:
+        </p>
+        <ul>
+            <li>Sở thích 1: ...</li>
+            <li>Sở thích 2: ...</li>
+            <li>Sở thích 3: ...</li>
+        </ul>
+    </div>
+
+    <script>
+        // JavaScript để tạo hiệu ứng chữ chạy
+        const nameElement = document.getElementById('name');
+        const nameText = "Lê Trần Chí Tài";
+        let index = 0;
+
+        function typeLetter() {
+            if (index < nameText.length) {
+                const span = document.createElement('span');
+                span.textContent = nameText[index];
+                span.style.opacity = 0; // Bắt đầu với độ mờ 0
+                nameElement.appendChild(span);
+
+                // Hiệu ứng tăng độ mờ
+                setTimeout(() => {
+                    span.style.transition = "opacity 0.5s";
+                    span.style.opacity = 1;
+                }, 50);
+
+                index++;
+                setTimeout(typeLetter, 300); // Thay đổi thời gian giữa các chữ
+            }
+        }
+
+        // Bắt đầu hiệu ứng khi trang được tải
+        window.onload = typeLetter;
+    </script>
 </body>
 </html>
